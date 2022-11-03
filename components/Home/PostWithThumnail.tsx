@@ -21,7 +21,7 @@ export default function PostWithThumnail({
     <div
       onClick={() => moveToPost(data.id)}
       className={cls(
-        "flex flex-col items-center w-full group border-black border-2 rounded-md shadow-xl cursor-pointer dark:border-white dark:shadow-neutral-600",
+        "flex flex-col items-center w-full group border-black border-2 rounded-md shadow-xl cursor-pointer dark:text-white dark:border-white dark:shadow-neutral-600",
         isMobile ? "hidden mobile:flex" : ""
       )}
     >

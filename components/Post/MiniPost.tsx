@@ -15,7 +15,7 @@ export default function MiniPost({ data }: { data: PostWithId }) {
   return (
     <div
       onClick={() => moveToPost(data.id)}
-      className="flex flex-col gap-3 w-2/3 border-solid border-black border-2 rounded-md p-5  shadow-xl cursor-pointer hover:ring-2 hover:ring-offset-2 hover:ring-black dark:border-white dark:shadow-neutral-600"
+      className="flex flex-col gap-3 w-2/3 border-solid border-black border-2 rounded-md p-5  shadow-xl cursor-pointer hover:ring-2 hover:ring-offset-2 dark:text-white hover:ring-black dark:border-white dark:shadow-neutral-600"
     >
       <div className="flex flex-row justify-between">
         <span>Title - {data.title}</span>
