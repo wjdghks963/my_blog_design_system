@@ -1,5 +1,7 @@
 # 블로그 디자인 시스템 with StoryBook
 
+- [chromatic 링크 ](https://63635e18291535f4d01657be-csrykgcgxo.chromatic.com/?path=/story/components-base-headerli--normal)
+
 ## Story 로 둘 것들
 
 1. 공통적으로 2번 이상 사용된 component
