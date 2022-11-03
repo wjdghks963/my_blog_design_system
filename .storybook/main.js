@@ -10,6 +10,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-docs",
     "@storybook/addon-actions",
+    "storybook-tailwind-dark-mode",
     {
       name: "@storybook/addon-postcss",
       options: {
@@ -18,7 +19,6 @@ module.exports = {
         },
       },
     },
-    "storybook-tailwind-dark-mode",
   ],
   framework: "@storybook/react",
   core: {

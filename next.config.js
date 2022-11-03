@@ -10,6 +10,14 @@ const nextConfig = {
     domains: ["res.cloudinary.com", "velog.velcdn.com", "images.velog.io"],
     formats: ["image/avif", "image/webp"],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/api/postImage/:postImageUrl*",
+        destination: `https://res.cloudinary.com/:postImageUrl*`,
+      },
+    ];
+  },
 };
 
 const removeImports = require("next-remove-imports")();
