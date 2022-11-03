@@ -6,8 +6,13 @@ import { ComponentStory, Story } from "@storybook/react";
 export default {
   title: "Components/Home/CategoryBox",
   component: "CategoryBox",
-  argTypes: {
-    isClicked: { control: { type: "boolean" } },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "category가 존재하는 포스트들을 모아두는 곳입니다. 토클을 통해 아래로 내용물을 내립니다.",
+      },
+    },
   },
   decorators: [
     (Story: Story) => (
@@ -22,15 +27,15 @@ const Template: ComponentStory<typeof CategoryBox> = (args) => (
   <CategoryBox {...args} />
 );
 
-export const Normal1 = Template.bind({});
-Normal1.args = {
+export const Normal = Template.bind({});
+Normal.args = {
   category: {
     category: "카데고리 입니다.",
     posts: [{ title: "카테고리에 있는 포스트", id: 1 }],
   },
 };
-export const Normal3 = Template.bind({});
-Normal3.args = {
+export const ThreePosts = Template.bind({});
+ThreePosts.args = {
   category: {
     category: "카데고리 입니다.",
     posts: [

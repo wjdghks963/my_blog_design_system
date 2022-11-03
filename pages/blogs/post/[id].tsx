@@ -62,7 +62,7 @@ export default function Post({ postData }: { postData: PostData }) {
   return (
     <Layout
       title={postData.title}
-      url={`/blogs/post/${router.query.id}`}
+      // url={`/blogs/post/${router.query.id}`}
       description={postData.description}
       image={SEOImage}
       keywords={tags.join(",")}
@@ -116,37 +116,37 @@ export default function Post({ postData }: { postData: PostData }) {
   );
 }
 
-export async function getStaticPaths() {
-  const res = await AllPostId();
+// export async function getStaticPaths() {
+//   const res = await AllPostId();
 
-  const paths = res?.map((post: any) => ({
-    params: {
-      id: post.id.toString(),
-    },
-  }));
-  return { paths, fallback: "blocking" };
-}
+//   const paths = res?.map((post: any) => ({
+//     params: {
+//       id: post.id.toString(),
+//     },
+//   }));
+//   return { paths, fallback: "blocking" };
+// }
 
-export async function getStaticProps({
-  params,
-}: {
-  params: any;
-}): Promise<GetStaticPropsResult<any>> {
-  const postData = await BlogPostById(params.id);
-  const category = postData.category ? postData.category.category : null;
-  const date = compareLocaleDate(postData.createdAt!, postData.updatedAt!);
-  return {
-    props: {
-      postData: {
-        title: postData.title,
-        content: postData.content,
-        tags: postData.tags,
-        views: postData.views,
-        description: postData.description,
-        date,
-        category,
-      },
-    },
-    revalidate: 60,
-  };
-}
+// export async function getStaticProps({
+//   params,
+// }: {
+//   params: any;
+// }): Promise<GetStaticPropsResult<any>> {
+//   const postData = await BlogPostById(params.id);
+//   const category = postData.category ? postData.category.category : null;
+//   const date = compareLocaleDate(postData.createdAt!, postData.updatedAt!);
+//   return {
+//     props: {
+//       postData: {
+//         title: postData.title,
+//         content: postData.content,
+//         tags: postData.tags,
+//         views: postData.views,
+//         description: postData.description,
+//         date,
+//         category,
+//       },
+//     },
+//     revalidate: 60,
+//   };
+// }

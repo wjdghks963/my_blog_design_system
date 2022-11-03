@@ -20,7 +20,14 @@ export default {
   title: "Components/Blog/TagNavBar",
   component: "TagNavBar",
   subcomponents: { TagSpan },
-  argsType: {},
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "/blogs 에서 어떤 태그들이 있나 알려주는 navbar입니다. 태그를 클릭한다면 해당하는 태그들을 필터합니다.",
+      },
+    },
+  },
   decorators: [
     (Story: Story) => (
       <Mockstore tagState={[{ tag: "ss" }]}>

@@ -6,8 +6,13 @@ import { ComponentStory } from "@storybook/react";
 export default {
   title: "Components/Base/HeaderLi",
   component: "HeaderLi",
-  argTypes: {
-    name: { control: { type: "text" } },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "Header에 존재하는 li입니다. name을 통해 보이는 Text를 조종할 수 있습니다.",
+      },
+    },
   },
   decorators: [
     (Story: Story) => (

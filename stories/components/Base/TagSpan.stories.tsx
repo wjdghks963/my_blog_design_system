@@ -20,7 +20,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: "Span으로 만든 Tag component",
+        component:
+          "이것은 Tag를 나타내는 component입니다. redux를 통해 클릭을 한다면 전역상태를 바꿔주거나 해당하는 상태로 /blogs 로 넘겨줍니다.",
       },
     },
   },

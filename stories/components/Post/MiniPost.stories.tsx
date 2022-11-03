@@ -15,6 +15,14 @@ const Mockstore = ({
 export default {
   name: "Component/Blog/MiniPost",
   component: MiniPost,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "이곳은 /blogs 페이지에서 보여지는 작은 포스트의 컴포넌트입니다. 반응형 사이즈에 따라 태그의 갯수를 줄이거나 늘립니다.",
+      },
+    },
+  },
   argsType: {
     title: {
       name: "title",
